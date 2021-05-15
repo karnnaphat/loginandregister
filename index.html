@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Login And Register</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="l4.png" sizes="16x16" />
+
+    <script src='login.js'></script>
+    <script src='register.js'></script>
+</head>  
+<body>
+    
+    <div class="web">
+       <div id = "Topic">
+        <h1> LinkedMe </h1>
+       </div> 
+        <div class ="form-box">
+             <div class ="button-box">
+                 <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn"onclick="register()">Register</button>
+            </div>
+           
+            <form id ="login"class="input-group" >  
+                <input type ="text" class="input-field" id="username" name= "username" placeholder="Username" required>
+                <input type ="text" class="input-field" id="password" name="password"placeholder="Password" required>
+                <input type ="checkbox" class="check-box"><span>Remember Password</span>
+                <a href = "Feed.html" ><button type="submit"  class="sumbit-btn">Log in </button></a>
+            </form>
+
+            <form id ="register"class="input-group">
+                <input type ="text" class="input-field" id="firstname" name ="Firstname"placeholder="Firstname*" required>
+                <input type ="text" class="input-field" id="lastname" name = "Lastname"placeholder="Lastname*" required>
+                <br>
+                <br>
+                <div id ="Gender"> 
+                    Gender*:
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                <br>
+                <br>
+                </div>
+               <div id = "Birthday"> Brithday*:
+			    <input type="date" class="birthday" name="birthday" placeholder="bd" required>
+            </div>
+               
+                <input type ="email" class="input-field" id="email" name="email" placeholder="Email*" required>
+                <input type ="text" class="input-field" id ="username" name="username" placeholder="Username*" required>
+                <input type ="password" class="input-field" id="password" name= "password" placeholder="Password*" required>
+			    <input type="password" class="input-field"id="repassword" name = "repassword"placeholder= "Retypepassword*"required>
+                <input type ="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+                <button type="submit" class="sumbit-btn">Register</button>
+        
+            </form>
+        </div>
+    </div>
+   
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register(){
+            x.style.left = "-400px";
+            y.style.left="50px";
+            z.style.left="110px";
+        }
+
+        function login(){
+            x.style.left = "50px";
+            y.style.left="550px";
+            z.style.left="0px";
+        }
+    </script>
+</body>
+</html>
